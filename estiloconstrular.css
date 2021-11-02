@@ -1,0 +1,144 @@
+@import url('reset.css');
+
+    * {
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+    }
+    .container{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin: 0 auto;
+        width: 80%;
+        height: 100%;
+        display: grid;
+        grid-template: "topo" 170px
+                        "menu"
+                        "conteudo" 1fr
+                        "rodape" 50px / 1fr;
+    }
+    #topo{
+        background-image: url("sistema.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+    }
+    #topo h1{
+        color: rgb(9, 192, 238);
+        font-size: 3rem;
+        font-family: cursive;
+        font-weight: bold;
+    }
+    #menu{
+        background-color: rgb(129, 19, 4);
+        color: white;
+        width: 100%;
+    }
+    #menu ul{
+        display: flex;
+    }
+    #menu ul li{
+        padding: 1.75rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    #menu ul li a{
+        text-decoration: none;
+        color: white;
+        padding: 1.7rem;
+    }
+    #menu ul li a:hover{
+        background-color: white;
+        color: rgb(129, 19, 4);
+        padding: 1.7rem;
+        
+    }
+    #conteudo{
+        background-color: white;
+        width: 100%;
+    }
+    #conteudo h3{
+        color: black;
+        font-size: 1.5rem;
+        margin: 1rem;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    #conteudo form{
+        margin: 2rem auto;
+        font-weight: bold;
+        width: 32rem;
+    }
+    #conteudo form input, select{
+        padding: 0.5rem;
+        width: 30rem;
+        border-radius: 5px;
+        border: 1px solid black;
+    }        
+    #conteudo form #btn{
+        width: 15rem;
+        background-color: #18497d;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    #conteudo #resposta{
+        margin: 1rem auto;
+        width: 20rem;
+        color: red;
+    }
+    #rodape{
+        background-color: #ff1616;
+        color: white;
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+    }
+    #conteudo h1{
+        font-size: 1.5rem;
+        margin: 1rem;
+        font-weight: bold;
+    }
+    #conteudo h2{
+        font-size: 1rem;
+        margin: 1rem;
+        font-weight: bold;
+    }
+    table{
+        border: 1px solid black;
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 2rem;
+    }
+    tr, th,td{
+        border: 1px solid black;
+        padding: 10px;
+    }
+    thead tr{
+        background-color: #18497d;
+        color: white;
+    }
+    .btn, a.btn{
+        padding: 7px;
+        color: white;
+        text-decoration: none;
+        outline: none;
+        margin: 0 5px;
+        background-color: rgb(109, 106, 106);
+    }
+    .btn-edit, a.btn-edit{
+        background-color: #ffea00;
+    }
+    .btn-remove, a.btn-remove{
+        background-color: #c43;
+    }
+
+    @media (max-width: 1500px){
+        .container{
+            width: 100%;
+        }
+    }
