@@ -11,7 +11,7 @@ require_once "funcoes/conexoes.php";
     </div>
     <div class="tipo">
         <label for="categoria">Categoria:</label>
-        <select type="text" name="categoria" id="categoria">
+        <select name="categoria" id="categoria">
             <option value="">TODAS</option>
             <?php
             $sql = "select idtipo, tipo from tipo order by tipo";
@@ -36,11 +36,15 @@ require_once "funcoes/conexoes.php";
     $categoria = $_POST["categoria"];
 
     $sql = "SELECT p.idproduto, p.nome, p.precocompra, p.precovenda, p.estoque, t.tipo 
-    FROM produtos p INNER JOIN tipo t ON p.tipo_idtipo = t.idtipo WHERE p.nome LIKE '".$nome."%' order by p.nome";
+    FROM produtos p 
+    INNER JOIN tipo t ON p.tipo_idtipo = t.idtipo 
+    WHERE p.nome LIKE '".$nome."%' ";
     
     if($categoria != ""){
-        $sql .= " AND t.idtipo = " . $categoria;
+        $sql .= " AND t.idtipo = ".$categoria;
     }
+
+    $sql .= " order by p.nome ";
     
     $resultSet = mysqli_query($conn, $sql);
     if(mysqli_num_rows($resultSet) > 0){
@@ -80,9 +84,10 @@ require_once "funcoes/conexoes.php";
 </table>
 <?php
     }
+}
     else{
         echo (Mysqli_error($conn));
     }
-}
+
 ?>
 <?php require_once "components/rodape.php";?>

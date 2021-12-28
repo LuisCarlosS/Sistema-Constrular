@@ -8,9 +8,9 @@
     $sql = "INSERT INTO tipo VALUES(NULL, '".$categoria."' )";
 
     if(mysqli_query($conn, $sql)){
-        echo "Categoria cadastrada com sucesso!";
+        echo "<div class= mensagem>Categoria cadastrada com sucesso!</div>";
     }else{
-        echo "Categoria não cadastrada";
+        echo "<div class= mensagem>Categoria não cadastrada</div>";
     }
 
     mysqli_close($conn);

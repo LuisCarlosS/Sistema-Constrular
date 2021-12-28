@@ -5,7 +5,6 @@
     </div>
 
 </body>
-<script src="formulario.js"></script>
 <script src="mascara.js"></script>
 <script src="funcao.js"></script>
 </html>

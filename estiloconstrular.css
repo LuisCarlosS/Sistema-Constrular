@@ -91,6 +91,13 @@
         width: 20rem;
         color: red;
     }
+    .mensagem{
+        border: 1px solid black;
+        border-radius: 5px;
+        margin: 1rem auto;
+        padding: 0.5rem;
+        text-align: center;
+    }
     #rodape{
         background-color: #ff1616;
         color: white;
@@ -112,7 +119,7 @@
         border: 1px solid black;
         width: 100%;
         border-collapse: collapse;
-        margin-top: 2rem;
+        margin: 1rem 0;
     }
     tr, th,td{
         border: 1px solid black;

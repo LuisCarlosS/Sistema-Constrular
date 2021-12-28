@@ -10,7 +10,7 @@
     $categoria = trim($_POST["categoria"]);
 
     if($nome == "" || $precocompra == "" || $precovenda == "" || $estoque == "" || $categoria == ""){
-        echo "Preencha todos os campos obrigatórios!";
+        echo "<div class= mensagem>Preencha todos os campos obrigatórios!</div>";
         exit;
     }
 
@@ -22,9 +22,9 @@
     $sql = "INSERT INTO produtos VALUES(NULL, '".$nome."', '".$precocompra."', '".$precovenda."', '".$estoque."', '".$categoria."')";
 
     if(mysqli_query($conn, $sql)){
-        echo "<p>Produto cadastrado com sucesso!</p>";
+        echo "<div class= mensagem>Produto cadastrado com sucesso!</div>";
     }else{
-        echo (Mysqli_error($conn)); //"<p>Não pode cadastrar o produto</p>";
+        echo "<div class= mensagem>Não foi possível cadastrar o produto</div>";
     }
 
     mysqli_close($conn);
